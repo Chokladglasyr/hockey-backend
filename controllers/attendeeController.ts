@@ -30,7 +30,7 @@ export const createAttendees = async (req: Request, res: Response) => {
         }
         const newAttendee = new Attendee ({name, email, staying, banquet, allergy, other});
         await newAttendee.save();
-        res.status(201).json({newAttendee})
+        res.status(201).json({message: "Thank you for signing up!"})
 
     }catch (err: unknown) {
         if(err instanceof Error){
